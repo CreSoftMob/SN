@@ -34,5 +34,18 @@
     <!-- The root element for your Expo app. -->
     <div id="root"></div>
   <script src="/SN/index-6d9bc19492b40d04a2f5fb4bf63261f9.js" defer></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/SN/service-worker.js')
+        .then(reg => {
+          console.log('[SW] Registrado com sucesso:', reg.scope);
+        })
+        .catch(err => {
+          console.log('[SW] Falha ao registrar:', err);
+        });
+    });
+  }
+    </script>
 </body>
 </html>
