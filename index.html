@@ -27,7 +27,7 @@
       flex: 1;
     }
   </style>
-  <link rel="shortcut icon" href="/SN/favicon.ico" />
+  <link rel="shortcut icon" href="/SN/favicon.icon" />
 </head>
 
 <body>
@@ -37,22 +37,22 @@
   </noscript>
   <!-- The root element for your Expo app. -->
   <div id="root"></div>
-    <script src="/SN/index-da48f88a63a9bfd62c0ae94ca9890a07.js" defer></script>
+   
+  <script src="/SN/index-da48f88a63a9bfd62c0ae94ca9890a07.js" defer></script>
+
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/SN/service-worker.js')
           .then(reg => {
-            console.log('[SW] Registrado com sucesso:', reg.scope);
+            console.log('[SN] Registrado com sucesso:', reg.scope);
           })
           .catch(err => {
-            console.log('[SW] Falha ao registrar:', err);
+            console.log('[SN] Falha ao registrar:', err);
           });
       });
     }
   </script>
-
-
 </body>
 
 </html>
