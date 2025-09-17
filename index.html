@@ -33,6 +33,17 @@
     </noscript>
     <!-- The root element for your Expo app. -->
     <div id="root"></div>
-  <script src="/_expo/static/js/web/index-d507ccc789e3cbe7ca974cc2286ee325.js" defer></script>
+    <script>
+          if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/SN/service-worker.js')
+        .then(function(registration) {
+          console.log('Service worker registrado com sucesso:', registration.scope);
+        })
+        .catch(function(error) {
+          console.log('Falha no registro do service worker:', error);
+        });
+    }
+    </script>
+  <script src="/SN/index-d507ccc789e3cbe7ca974cc2286ee325.js" defer></script>
 </body>
 </html>
