@@ -1,49 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>SameNext</title>
-    <link rel="manifest" href="/SN/manifest.json" />
-    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
-    <style id="expo-reset">
-      /* These styles make the body full-height */
-      html,
-      body {
-        height: 100%;
-      }
-      /* These styles disable body scrolling if you are using <ScrollView> */
-      body {
-        overflow: hidden;
-      }
-      /* These styles make the root element full-height */
-      #root {
-        display: flex;
-        height: 100%;
-        flex: 1;
-      }
+Segue um exemplo completo e funcional de código HTML que cria um botão que, ao ser clicado, direciona o usuário para outro site.
+Você pode trocar o endereço (https://www.exemplo.com) pelo link desejado.
+Html<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão com Link</title>
+    <style>
+        /* Estilo opcional para o botão */
+        .botao-link {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .botao-link:hover {
+            background-color: #45a049; /* Verde mais escuro no hover */
+        }
     </style>
-  <link rel="shortcut icon" href="/SN/favicon.ico" /></head>
+</head>
+<body>
 
-  <body>
-    <!-- Use static rendering with Expo Router to support running without JavaScript. -->
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <!-- The root element for your Expo app. -->
-    <div id="root"></div>
-    <script>
-          if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/SN/service-worker.js')
-        .then(function(registration) {
-          console.log('Service worker registrado com sucesso:', registration.scope);
-        })
-        .catch(function(error) {
-          console.log('Falha no registro do service worker:', error);
-        });
-    }
-    </script>
-  <script src="/SN/index-d507ccc789e3cbe7ca974cc2286ee325.js" defer></script>
+    <h2>Para acessar o SameNext agora clique no botão abaixo ou acesse manualemente</h2>
+    <p>www.samenext.com.br</p>
+    <!-- Botão que redireciona para outro site -->
+    <button class="botao-link" onclick="window.location.href='https://www.samenext.com.br';">
+        Ir para o novo site do SameNext
+    </button>
+
 </body>
 </html>
+
